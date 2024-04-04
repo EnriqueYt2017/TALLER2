@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Envio</title>
+    <link rel="stylesheet" href="css/formulario.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Solicitud del Mecánico</h1>
+        <form>
+            <label for="nombre">Nombre del Cliente:</label>
+            <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+            <label for="modelo">Modelo de Auto:</label>
+            <input type="text" id="modelo" placeholder="Ingrese el modelo del auto" required>
+            <label for="anio">Año del Auto:</label>
+            <input type="number" id="anio" placeholder="Ingrese el año del auto" required>
+            <label for="anio">Patente del Auto:</label>
+            <input type="number" id="anio" placeholder="Ingrese el año del auto" required>
+            <label for="fotos">Subir Fotos:</label>
+            <input type="file" id="fotos" accept="image/*" multiple>
+            <!-- Aquí iría el código para el carrusel de fotos -->
+            <div class="carousel">
+                <img src="ruta_imagen1.jpg" alt="Foto 1">
+                <img src="ruta_imagen2.jpg" alt="Foto 2">
+                <!-- Agrega más imágenes aquí -->
+            </div>
+            <div class="details">
+                <p><strong>Atención:</strong> Realizamos diagnóstico y reparación de vehículos.</p>
+            </div>
+            <button type="submit">Enviar Solicitud</button>
+        </form>
+    </div>
+</body>
+</html>
