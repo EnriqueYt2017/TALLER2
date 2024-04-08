@@ -1,5 +1,6 @@
-.navbar{
-    background-color: rgb(197, 43, 43);
+.navbar {
+    background-color: #333;
+    overflow: visible;
 }
 
 .container{

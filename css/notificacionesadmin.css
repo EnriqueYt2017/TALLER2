@@ -1,4 +1,10 @@
-p{
-    text-align: right;
+
+.leido{
+    text-align: right; display: inline-block; width: 100%;
     font-family: 'Times New Roman', Times, serif;
+}
+
+
+.mecanico{
+    color: black;
 }
