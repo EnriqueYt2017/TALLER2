@@ -8,93 +8,194 @@
 <body>
     <style>
         body {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    font-family: Poppins;
+}
+    *{
     margin: 0;
     padding: 0;
-    width: 100%;
-}
+    box-sizing: border-box;
+    }
+    img{
+        max-width: 100%;
+        border-radius: 5px;
+    }
 
-#hellobar-bar {
-    font-family: "Open Sans", sans-serif;
-    width: 100%;
-    margin: 0;
-    height: 30px;
-    display: table;
-    font-size: 17px;
-    font-weight: 400;
-    padding: .33em .5em;
-    -webkit-font-smoothing: antialiased;
-    color: #5c5e60;
-    position: fixed;
-    background-color: white;
-    box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.15);
-}
+    .container-images{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 20px;
 
-#hellobar-bar.regular {
-    height: 30px;
-    font-size: 14px;
-    padding: .2em .5em;
-}
+    }
+    .main{
+        display: flex;
+        gap: 20px;
+        margin-top: 100px;
+    }
 
-.hb-content-wrapper {
-    text-align: center;
-    position: relative;
-    display: table-cell;
-    vertical-align: middle;
-}
+    .description{
+        flex: 1;
+        padding: 10px 20px;
+    }
+    .description h1{
+        text-align: center;
+        margin-bottom: 40px;
+    }
 
-.hb-content-wrapper p {
-    margin-top: 0;
-    margin-bottom: 0;
-}
+    .description p{
+        font-weight: 300;
+        color: blanchedalmond;
+        font-size: 15px;
 
-.hb-text-wrapper {
-    margin-right: .67em;
-    display: inline-block;
-    line-height: 1.3;
-}
+        column-count: 2;
+        column-gap: 50px;
+        column-rule: 1px solid white;
+    }
+    .alter-imgs{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
 
-.hb-text-wrapper .hb-headline-text {
-    font-size: 1em;
-    display: inline-block;
-    vertical-align: middle;
-}
+    .alter-imgs img{
+        outline-offset: 3px;
+        object-fit: cover;
+    }
 
-#hellobar-bar .hb-cta {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 5px 0;
-    color: #ffffff;
-    background-color: #22af73;
-    border-color: #22af73;
-}
+    .alter-imgs img:hover{
+        outline: 2px solid #ffff;
+        transform: scale(1.05);
+    }
 
-.hb-cta-button {
-    opacity: 1;
-    color: #fff;
-    display: block;
-    cursor: pointer;
-    line-height: 1.5;
-    max-width: 22.5em;
-}
+    .alter-imgs:hover img:not(:hover){
+        transform: scale(0.90);
+    }
 
+    .active-img img:hover{
+        outline: 2px solid #ffff;
+        transform: scale(1.05);
+    }
+    .active-imgs img{
+        outline-offset: 3px;
+        object-fit: cover;
+    }
+
+
+    .container-popup-img{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 2;
+
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .popup-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 70%;
+        
+        transform: translate(-50%, -50%);
+    }
+
+    .container-popup-img:target{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .popup-close:link, .popup-close:visited{
+        text-decoration: none;
+        color: white;
+        font-size: 50px;
+        position: absolute;
+        top: -45px;
+        right: -90px;
+        line-height: 1;
+        display: inline-block;
+        transition: all .3s;
+    }
+
+    .popup-close:hover{
+        color: aquamarine;
+    }
     </style>
-    <div id="hellobar-bar" class="regular closable">
-        <div class="hb-content-wrapper">
-            <div class="hb-text-wrapper">
-                <div class="hb-headline-text">
-                    <p><span>´´´´´´´´´´´´´'0000000000000000000.............</span></p>
-                </div>
+    <main class="main">
+        <div class="container-images" id="gallery-img">
+            <div class="active-img">
+                <!--Imagen principal-->
+                <a href="#popup-img-big">
+                <img src="img/a7c9669872c84490b7f25d74478b3689.jpg" alt="valle"></a>
             </div>
-            <a href="http://www.programacion.net" target="_blank" class="hb-cta hb-cta-button">
-                <div class="hb-text-holder">
-                    <p>xdccccv</p>
-                </div>
-            </a>
+            <div class="alter-imgs">
+                <a href="#popup-img-small-1"><img src="img/auto5.jpg" alt=""></a>
+
+                <a href="#popup-img-small-2"><img src="img/auto3.jpg" alt=""></a>
+
+                <a href="#popup-img-small-3"><img src="img/a7c9669872c84490b7f25d74478b3689.jpg" alt=""></a>
+
+            </div>
         </div>
-        <div class="hb-close-wrapper">
-            <a href="javascript:void(0);" class="icon-close">✖</a>
+        <div class="description">
+            <h1>Boton Galeria imagenes</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                 elit. Dolores suscipit mollitia amet corporis
+                  saepe voluptate, minima autem vel! Praesentium 
+                  deleniti debitis voluptatibus ratione eum tempore, 
+                  esse id commodi ducimus soluta. Consectetur ratione
+                   minima totam, eere impedit.</p>
+        </div>
+    </main>
+    
+    <!--POPUTS-->
+    <!--img big main-->
+    <div class="container-popup-img" id="popup-img-big">
+        <div class="popup-content">
+            <a href="#gallery-img" class="popup-close">&times;</a>
+            <figure>
+                <img src="img/a7c9669872c84490b7f25d74478b3689.jpg" alt="" class="img-popup"
+                />
+            </figure>
         </div>
     </div>
-    
+
+
+    <div class="container-popup-img" id="popup-img-small-1">
+        <div class="popup-content">
+            <a href="#gallery-img" class="popup-close">&times;</a>
+            <figure>
+                <img src="img/auto5.jpg" alt="" class="img-popup"
+                />
+            </figure>
+        </div>
+    </div>
+
+    <div class="container-popup-img" id="popup-img-small-2">
+        <div class="popup-content">
+            <a href="#gallery-img" class="popup-close">&times;</a>
+            <figure>
+                <img src="img/auto3.jpg" alt="" class="img-popup"
+                />
+            </figure>
+        </div>
+    </div>
+
+    <div class="container-popup-img" id="popup-img-small-3">
+        <div class="popup-content">
+            <a href="#gallery-img" class="popup-close">&times;</a>
+            <figure>
+                <img src="img/a7c9669872c84490b7f25d74478b3689.jpg" alt="" class="img-popup"
+                />
+            </figure>
+        </div>
+    </div>
 </body>
 </html>

@@ -9,14 +9,48 @@
     <title>Notificaciones</title>
 </head>
 <body>
+  <style>
+    body{
+      margin: auto;
+      margin-top: 50%;
+      background-color: rgb(172, 169, 169);
+    }
+    .container {
+      background-color: rgb(255, 255, 255);
+      padding-bottom: 200px;
+      padding-top: 40px;
+    }
+
+    .container a{
+      text-decoration: none;
+      color: black;
+    }
+    .container a:hover{
+      text-decoration: none;
+      color: rgb(184, 178, 178);
+    }
+    .container h2{
+      text-align: center;
+    }
+  </style>
     <div class="container mt-3">
-        <h2>Notificaciones</h2>
-        <a href="Home_empleado.html">Volver</a>
-        <a class="leido" href="">Marcar todo como leído</a>
-        <ul class="list-group">
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <a class="mecanico" href="">Administrador</a>
+      <a href="Home_empleado.html">Volver</a>
+      <a class="leido" href="">Marcar todo como leído</a>
+      <h2>Notificaciones</h2>
+        <div class="card">
+          <div class="card-header">
+            <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+              Administrador
+            </a>
+          </div>
+          <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+            <div class="card-body">
+              <a href="revision1.html">Solicitud Aceptada </a>
+            </div>
+          </div>
+        </div>
         </ul>
+      </div>
       </div>
       
 </body>
